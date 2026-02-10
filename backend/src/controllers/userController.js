@@ -1,14 +1,16 @@
 import { supabase } from '../services/supabase.js';
+import bcrypt from 'bcryptjs';
 
 export const createUser = async (req, res) => {
     const { password, name, username, role } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     // INSERT USER
     const { data: user, error: userError } = await supabase
         .from('users')
         .insert([
             {
-                password,      // your table uses "password"
+                password, hashedPassword,     // your table uses "password"
                 name,
                 username,
                 role_id: role  // your table uses "role_id"
@@ -39,5 +41,5 @@ export const createUser = async (req, res) => {
         }
     }
 
-    return res.json({ message: 'User created', user });
+    return res.status(201).json({ message: 'User created', user });
 };

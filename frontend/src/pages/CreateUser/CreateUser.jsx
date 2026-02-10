@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import PageWrapper from '../../components/layout/PageWrapper'
 import TextInput from '../../components/forms/TextInput'
 import Button from '../../components/forms/Button'
@@ -5,12 +6,13 @@ import { useForm } from '../../hooks/useForm.js'
 import './create-user.css'
 
 export default function CreateUser() {
-    const { values, handleChange } = useForm({
+    const { values, handleChange, setValues } = useForm({
         username: '',
         password: '',
         name: '', 
         role: 2,
     });
+    const navigate = useNavigate();
 
     const API_Url = import.meta.env.VITE_API_URL
 
@@ -37,7 +39,7 @@ export default function CreateUser() {
             }
 
             // Success
-            alert('User created successfully')
+            navigate('/');
 
             // Reset form
             setValues({
@@ -46,6 +48,8 @@ export default function CreateUser() {
                 name:     '',
                 role:     2
             })
+
+            
         } catch (error) {
             console.error("Network Error: ", error)
             alert('Network error - check console');
