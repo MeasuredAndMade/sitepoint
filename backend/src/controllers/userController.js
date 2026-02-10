@@ -10,7 +10,7 @@ export const createUser = async (req, res) => {
         .from('users')
         .insert([
             {
-                password, hashedPassword,     // your table uses "password"
+                password: hashedPassword,     // your table uses "password"
                 name,
                 username,
                 role_id: role  // your table uses "role_id"
