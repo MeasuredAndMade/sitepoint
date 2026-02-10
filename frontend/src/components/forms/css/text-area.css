@@ -1,0 +1,26 @@
+/* Base styling */
+.sp-textarea {
+  border-color: var(--color-border) !important;
+  color: var(--color-text);
+  background-color: white;
+  resize: none; /* auto-resize only */
+}
+
+/* Placeholder */
+.sp-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Focus state */
+.sp-textarea:focus {
+  border-color: var(--color-primary-accent) !important;
+  box-shadow: 0 0 0 0.125em rgba(77, 163, 255, 0.25);
+}
+
+/* Character count */
+.sp-char-count {
+  text-align: right;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}

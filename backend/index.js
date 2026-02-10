@@ -6,6 +6,11 @@ import userRoutes from './src/routes/userRoutes.js';
 dotenv.config()
 
 const app = express();
+
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 app.use(cors());
 app.use(express.json());
 

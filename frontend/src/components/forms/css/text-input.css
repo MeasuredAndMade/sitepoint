@@ -1,0 +1,13 @@
+.text-input {
+  border-color: var(--color-border) !important;
+  color: var(--color-text);
+}
+
+.text-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.text-input:focus {
+  border-color: var(--color-primary-accent) !important;
+  box-shadow: 0 0 0 0.125em rgba(77, 163, 255, 0.25);
+}

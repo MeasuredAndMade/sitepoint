@@ -1,0 +1,11 @@
+.sp-create-user-title {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.sp-create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+

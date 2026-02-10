@@ -1,0 +1,17 @@
+.sp-navbar {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sp-navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sp-navbar-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

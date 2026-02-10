@@ -1,0 +1,19 @@
+:root {
+  /* Core Brand */
+  --color-primary: #1F3A5F;        /* Deep Tech Blue */
+  --color-primary-accent: #4DA3FF; /* Bright Accent Blue */
+  --color-gold: #E8B04C;           /* Warm Gold */
+
+  /* Neutrals */
+  --color-bg-light: #F7F8FA;       /* Soft Light Gray */
+  --color-surface: #ECEEF1;        /* Subtle Gray */
+  --color-border: #D5D9DE;         /* Cool Border Gray */
+  --color-text: #1A1D21;           /* Charcoal */
+  --color-text-muted: #6B7078;     /* Muted Slate */
+
+  /* Supporting Accents */
+  --color-success: #4CAF7A;        /* Soft Green */
+  --color-info: #3BAFBF;           /* Cool Teal */
+  --color-warning: #DFAF3A;        /* Muted Amber */
+  --color-error: #E57373;          /* Soft Red */
+}
