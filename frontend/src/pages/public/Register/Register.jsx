@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
-import PageWrapper from '../../components/layout/PageWrapper'
-import TextInput from '../../components/forms/TextInput'
-import Button from '../../components/forms/Button'
-import { useForm } from '../../hooks/useForm.js'
-import './create-user.css'
+import PageWrapper from '../../../components/layout/PageWrapper.jsx'
+import TextInput from '../../../components/forms/TextInput.jsx'
+import Button from '../../../components/forms/Button.jsx'
+import { useForm } from '../../../hooks/useForm.js'
+import './register.css'
 
 export default function CreateUser() {
     const { values, handleChange, setValues } = useForm({

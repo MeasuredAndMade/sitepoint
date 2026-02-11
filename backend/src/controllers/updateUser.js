@@ -1,4 +1,4 @@
-import { supabase } from "../services/supabase";
+import { supabase } from "../services/supabase.js";
 
 export const updateUser = async (req, res) => {
     const userId = req.params.id;

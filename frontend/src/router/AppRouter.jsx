@@ -1,16 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createBrowserRouter } from "react-router-dom";
 
-// Pages
-import Dashboard from '../pages/Dashboard/Dashboard'
-import CreateUser from '../pages/CreateUser/CreateUser'
+// Layouts
+import AdminLayout from "../layouts/AdminLayout";
 
-export default function AppRouter() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Dashboard />} />
-                <Route path='/create-user' element={<CreateUser />} />
-            </Routes>
-        </BrowserRouter>
-    )
-}
+// Admin Pages
+import Dashboard from '../pages/admin/Dashboard/Dashboard';
+import Users from '../pages/admin/Users/Users'
+import Register from '../pages/public/Register/Register'
+
+const router = createBrowserRouter([
+    {
+        path: '/register',
+        element: <Register />
+    },
+    {
+        path: '/admin',
+        element: <AdminLayout />,
+        children: [
+            { index: true, element: <Dashboard /> },
+            { path: 'users', element: <Users />}
+        ]
+    }
+]);
